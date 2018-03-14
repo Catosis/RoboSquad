@@ -1,2 +1,2 @@
-
--DCATKIN_DEVEL_PREFIX=/home/connie/RoboSquad/devel -DCMAKE_INSTALL_PREFIX=/home/connie/RoboSquad/install -G Unix Makefiles
+squad
+-DCATKIN_DEVEL_PREFIX=/home/connie/robo_squad/devel -DCMAKE_INSTALL_PREFIX=/home/connie/robo_squad/install -G Unix Makefiles

@@ -1,8 +1,8 @@
-# Install script for directory: /home/connie/RoboSquad/src
+# Install script for directory: /home/connie/robo_squad/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/connie/RoboSquad/install")
+  set(CMAKE_INSTALL_PREFIX "/home/connie/robo_squad/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,79 +44,80 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/connie/RoboSquad/install/_setup_util.py")
+   "/home/connie/robo_squad/install/_setup_util.py")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/connie/RoboSquad/install" TYPE PROGRAM FILES "/home/connie/RoboSquad/build/catkin_generated/installspace/_setup_util.py")
+file(INSTALL DESTINATION "/home/connie/robo_squad/install" TYPE PROGRAM FILES "/home/connie/robo_squad/build/catkin_generated/installspace/_setup_util.py")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/connie/RoboSquad/install/env.sh")
+   "/home/connie/robo_squad/install/env.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/connie/RoboSquad/install" TYPE PROGRAM FILES "/home/connie/RoboSquad/build/catkin_generated/installspace/env.sh")
+file(INSTALL DESTINATION "/home/connie/robo_squad/install" TYPE PROGRAM FILES "/home/connie/robo_squad/build/catkin_generated/installspace/env.sh")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/connie/RoboSquad/install/setup.bash")
+   "/home/connie/robo_squad/install/setup.bash")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/connie/RoboSquad/install" TYPE FILE FILES "/home/connie/RoboSquad/build/catkin_generated/installspace/setup.bash")
+file(INSTALL DESTINATION "/home/connie/robo_squad/install" TYPE FILE FILES "/home/connie/robo_squad/build/catkin_generated/installspace/setup.bash")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/connie/RoboSquad/install/setup.sh")
+   "/home/connie/robo_squad/install/setup.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/connie/RoboSquad/install" TYPE FILE FILES "/home/connie/RoboSquad/build/catkin_generated/installspace/setup.sh")
+file(INSTALL DESTINATION "/home/connie/robo_squad/install" TYPE FILE FILES "/home/connie/robo_squad/build/catkin_generated/installspace/setup.sh")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/connie/RoboSquad/install/setup.zsh")
+   "/home/connie/robo_squad/install/setup.zsh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/connie/RoboSquad/install" TYPE FILE FILES "/home/connie/RoboSquad/build/catkin_generated/installspace/setup.zsh")
+file(INSTALL DESTINATION "/home/connie/robo_squad/install" TYPE FILE FILES "/home/connie/robo_squad/build/catkin_generated/installspace/setup.zsh")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/connie/RoboSquad/install/.rosinstall")
+   "/home/connie/robo_squad/install/.rosinstall")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/connie/RoboSquad/install" TYPE FILE FILES "/home/connie/RoboSquad/build/catkin_generated/installspace/.rosinstall")
+file(INSTALL DESTINATION "/home/connie/robo_squad/install" TYPE FILE FILES "/home/connie/robo_squad/build/catkin_generated/installspace/.rosinstall")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/connie/RoboSquad/build/gtest/cmake_install.cmake")
+  include("/home/connie/robo_squad/build/gtest/cmake_install.cmake")
+  include("/home/connie/robo_squad/build/squad/cmake_install.cmake")
 
 endif()
 
@@ -128,5 +129,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/connie/RoboSquad/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/connie/robo_squad/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/connie/RoboSquad/src
+CMAKE_SOURCE_DIR = /home/connie/robo_squad/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/connie/RoboSquad/build
+CMAKE_BINARY_DIR = /home/connie/robo_squad/build
 
 # Utility rule file for run_tests.
 
@@ -67,6 +67,6 @@ CMakeFiles/run_tests.dir/clean:
 .PHONY : CMakeFiles/run_tests.dir/clean
 
 CMakeFiles/run_tests.dir/depend:
-	cd /home/connie/RoboSquad/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/connie/RoboSquad/src /home/connie/RoboSquad/src /home/connie/RoboSquad/build /home/connie/RoboSquad/build /home/connie/RoboSquad/build/CMakeFiles/run_tests.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/connie/robo_squad/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/connie/robo_squad/src /home/connie/robo_squad/src /home/connie/robo_squad/build /home/connie/robo_squad/build /home/connie/robo_squad/build/CMakeFiles/run_tests.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/run_tests.dir/depend
 

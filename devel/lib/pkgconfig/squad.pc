@@ -1,0 +1,8 @@
+prefix=/home/connie/robo_squad/devel
+
+Name: squad
+Description: Description of squad
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/connie/robo_squad/devel/lib 
+Requires: 
