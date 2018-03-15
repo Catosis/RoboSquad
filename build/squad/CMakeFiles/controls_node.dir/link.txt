@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/controls_node.dir/src/controls.cpp.o  -o /home/connie/robo_squad/devel/lib/squad/controls_node -rdynamic 
