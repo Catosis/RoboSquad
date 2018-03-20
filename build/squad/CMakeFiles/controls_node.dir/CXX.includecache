@@ -7,10 +7,12 @@
 #IncludeRegexTransform: 
 
 /home/connie/robo_squad/src/squad/src/controls.cpp
+stdio.h
+-
 ros/ros.h
-/home/connie/robo_squad/src/squad/src/ros/ros.h
+-
 std_msgs/String.h
-/home/connie/robo_squad/src/squad/src/std_msgs/String.h
+-
 
 /opt/ros/kinetic/include/ros/advertise_options.h
 ros/forwards.h

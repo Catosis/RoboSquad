@@ -6,6 +6,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  genmsg
 )
 
 ## System dependencies are found with CMake's conventions
@@ -119,8 +120,10 @@ include_directories(
 # add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 add_executable(vision_node src/vision.cpp)
+target_link_libraries(vision_node ${catkin_LIBRARIES})
 
 add_executable(controls_node src/controls.cpp)
+target_link_libraries(controls_node ${catkin_LIBRARIES})
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
@@ -128,12 +131,13 @@ add_executable(controls_node src/controls.cpp)
 
 
 ## Specify libraries to link a library or executable target against
-target_link_libraries(vision_node
-   ${catkin_LIBRARIES}
-   ${OpenCV_LIBS}
- )
+target_link_libraries( vision_node
+    ${catkin_LIBRARIES}
+    ${OpenCV_LIBS}
+)
 
-add_dependencies(controls_node vision_node_generate_messages_cpp)
+# add_dependencies(controls_node 
+# vision_node_generate_messages_cpp)
 
 #############
 ## Install ##

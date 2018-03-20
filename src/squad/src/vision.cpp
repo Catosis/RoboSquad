@@ -9,7 +9,7 @@ int main(int argc, char** argv )
     //init ros
     ros::init(argc, argv, "talker");
     ros::NodeHandle nh;
-    ros::Publisher pub = nh.advertise<std_msgs::String>("vision_out", 1);
+    ros::Publisher pub = nh.advertise<std_msgs::String>("vision_out", 2);
 
     ros::Rate rate(10);
 
@@ -18,8 +18,9 @@ int main(int argc, char** argv )
        msg.data = "test message";
        pub.publish(msg);
 
-      //Delays untill it is time to send another message
-      rate.sleep();
+       ROS_INFO("%s", msg.data.c_str());
+       //Delays untill it is time to send another message
+       rate.sleep();
      }
 
     /*\

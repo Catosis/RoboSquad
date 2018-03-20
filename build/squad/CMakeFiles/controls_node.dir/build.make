@@ -90,6 +90,25 @@ controls_node_EXTERNAL_OBJECTS =
 
 /home/connie/robo_squad/devel/lib/squad/controls_node: squad/CMakeFiles/controls_node.dir/src/controls.cpp.o
 /home/connie/robo_squad/devel/lib/squad/controls_node: squad/CMakeFiles/controls_node.dir/build.make
+/home/connie/robo_squad/devel/lib/squad/controls_node: /opt/ros/kinetic/lib/libroscpp.so
+/home/connie/robo_squad/devel/lib/squad/controls_node: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/connie/robo_squad/devel/lib/squad/controls_node: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+/home/connie/robo_squad/devel/lib/squad/controls_node: /opt/ros/kinetic/lib/librosconsole.so
+/home/connie/robo_squad/devel/lib/squad/controls_node: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
+/home/connie/robo_squad/devel/lib/squad/controls_node: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
+/home/connie/robo_squad/devel/lib/squad/controls_node: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/connie/robo_squad/devel/lib/squad/controls_node: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/connie/robo_squad/devel/lib/squad/controls_node: /opt/ros/kinetic/lib/libxmlrpcpp.so
+/home/connie/robo_squad/devel/lib/squad/controls_node: /opt/ros/kinetic/lib/libroscpp_serialization.so
+/home/connie/robo_squad/devel/lib/squad/controls_node: /opt/ros/kinetic/lib/librostime.so
+/home/connie/robo_squad/devel/lib/squad/controls_node: /opt/ros/kinetic/lib/libcpp_common.so
+/home/connie/robo_squad/devel/lib/squad/controls_node: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/connie/robo_squad/devel/lib/squad/controls_node: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/connie/robo_squad/devel/lib/squad/controls_node: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/connie/robo_squad/devel/lib/squad/controls_node: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/connie/robo_squad/devel/lib/squad/controls_node: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/home/connie/robo_squad/devel/lib/squad/controls_node: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/connie/robo_squad/devel/lib/squad/controls_node: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
 /home/connie/robo_squad/devel/lib/squad/controls_node: squad/CMakeFiles/controls_node.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/connie/robo_squad/devel/lib/squad/controls_node"
 	cd /home/connie/robo_squad/build/squad && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/controls_node.dir/link.txt --verbose=$(VERBOSE)
