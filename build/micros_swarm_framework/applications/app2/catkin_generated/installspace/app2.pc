@@ -1,0 +1,8 @@
+prefix=/home/connie/robo_squad/install
+
+Name: app2
+Description: Description of app2
+Version: 0.0.17
+Cflags: -I/home/connie/robo_squad/install/include
+Libs: -L/home/connie/robo_squad/install/lib 
+Requires: micros_swarm roscpp rospy std_msgs nav_msgs geometry_msgs

@@ -1,0 +1,8 @@
+prefix=/home/connie/robo_squad/devel
+
+Name: micros_swarm_stage
+Description: Description of micros_swarm_stage
+Version: 0.0.17
+Cflags: 
+Libs: -L/home/connie/robo_squad/devel/lib 
+Requires: roscpp rospy std_msgs

@@ -53,7 +53,8 @@ int main(int argc, char **argv)
    * away the oldest ones.
    */
 // %Tag(SUBSCRIBER)%
-  ros::Subscriber sub = n.subscribe("vision_out", 1000, visionCallBack);
+  ros::Subscriber sub = n.subscribe("chatter", 1000, visionCallBack);
+  //vision_out is the cpp file
 // %EndTag(SUBSCRIBER)%
 
   /**

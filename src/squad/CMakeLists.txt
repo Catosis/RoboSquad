@@ -12,6 +12,9 @@ find_package(catkin REQUIRED COMPONENTS
 ## System dependencies are found with CMake's conventions
 find_package(OpenCV)
 
+## Uncomment if the package has a setup.py
+catkin_python_setup()
+
 ################################################
 ## Declare ROS messages, services and actions ##
 ################################################
@@ -135,9 +138,6 @@ target_link_libraries( vision_node
     ${catkin_LIBRARIES}
     ${OpenCV_LIBS}
 )
-
-# add_dependencies(controls_node 
-# vision_node_generate_messages_cpp)
 
 #############
 ## Install ##

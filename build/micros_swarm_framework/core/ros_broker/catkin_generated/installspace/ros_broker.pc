@@ -1,0 +1,8 @@
+prefix=/home/connie/robo_squad/install
+
+Name: ros_broker
+Description: Description of ros_broker
+Version: 0.0.17
+Cflags: -I/home/connie/robo_squad/install/include
+Libs: -L/home/connie/robo_squad/install/lib 
+Requires: roscpp rospy message_runtime std_msgs micros_swarm
