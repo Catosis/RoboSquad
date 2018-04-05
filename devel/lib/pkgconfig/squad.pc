@@ -3,6 +3,6 @@ prefix=/home/connie/robo_squad/devel
 Name: squad
 Description: Description of squad
 Version: 0.0.0
-Cflags: 
+Cflags: -I/home/connie/robo_squad/devel/include
 Libs: -L/home/connie/robo_squad/devel/lib 
-Requires: 
+Requires: roscpp rospy std_msgs message_runtime geometry_msgs

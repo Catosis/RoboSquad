@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(squad_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT " " STREQUAL " ")
+if(NOT "/home/connie/robo_squad/devel/include " STREQUAL " ")
   set(squad_INCLUDE_DIRS "")
-  set(_include_dirs "")
+  set(_include_dirs "/home/connie/robo_squad/devel/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -129,7 +129,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/connie/robo_squad/devel/lib;/home/connie/robo_squad/devel/lib;/home/connie/catkin_ws/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/connie/robo_squad/devel/lib;/home/connie/robo_squad/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -152,7 +152,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(squad_EXPORTED_TARGETS "")
+set(squad_EXPORTED_TARGETS "squad_generate_messages_cpp;squad_generate_messages_eus;squad_generate_messages_lisp;squad_generate_messages_nodejs;squad_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${squad_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -160,7 +160,7 @@ foreach(t ${squad_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "")
+set(depends "roscpp;rospy;std_msgs;message_runtime;geometry_msgs")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls
@@ -189,7 +189,7 @@ foreach(depend ${depends})
   list(APPEND squad_EXPORTED_TARGETS ${${squad_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "")
+set(pkg_cfg_extras "squad-msg-extras.cmake")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${squad_DIR}/${extra})

@@ -1,6 +1,6 @@
 set(squad_SETUP_PY_VERSION "0.0.0")
 set(squad_SETUP_PY_SCRIPTS "")
-set(squad_SETUP_PY_PACKAGES "packages")
-set(squad_SETUP_PY_PACKAGE_DIRS "src/packages")
+set(squad_SETUP_PY_PACKAGES "squad")
+set(squad_SETUP_PY_PACKAGE_DIRS "src/squad")
 set(squad_SETUP_PY_MODULES "")
 set(squad_SETUP_PY_MODULE_DIRS "")

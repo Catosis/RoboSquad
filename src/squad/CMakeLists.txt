@@ -7,6 +7,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
   genmsg
+  geometry_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -39,12 +40,12 @@ catkin_python_setup()
 ##   * uncomment the generate_messages entry below
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
-## Generate messages in the 'msg' folder
-# add_message_files(
-#   FILES
-#   Message1.msg
-#   Message2.msg
-# )
+#Generate messages in the 'msg' folder
+add_message_files(
+   FILES
+   Kiwi.msg
+   #Message2.msg
+ )
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -86,6 +87,11 @@ catkin_python_setup()
 #   cfg/DynReconf2.cfg
 # )
 
+
+## Generate added messages and services
+generate_messages(DEPENDENCIES std_msgs geometry_msgs)
+
+
 ###################################
 ## catkin specific configuration ##
 ###################################
@@ -98,9 +104,10 @@ catkin_python_setup()
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES squad
-#  CATKIN_DEPENDS roscpp rospy std_msgs
+   CATKIN_DEPENDS roscpp rospy std_msgs message_runtime geometry_msgs
 #  DEPENDS system_lib
 )
+
 
 ###########
 ## Build ##
@@ -114,9 +121,6 @@ include_directories(
   ${OpenCV_INCLUDE_DIRS}
 )
 
-## Generate added messages and services
-#generate_messages(DEPENDENCIES std_msgs)
-
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
 ## either from message generation or dynamic reconfigure
@@ -127,6 +131,13 @@ target_link_libraries(vision_node ${catkin_LIBRARIES})
 
 add_executable(controls_node src/controls.cpp)
 target_link_libraries(controls_node ${catkin_LIBRARIES})
+
+add_executable(teleop teleop/teleop_turtle_key.cpp)
+target_link_libraries(teleop ${catkin_LIBRARIES})
+
+#add_executable(robomotion teleop/robot_motor_control.cpp)
+#target_link_libraries(teleop ${catkin_LIBRARIES} pigpio rt pthread)
+#target_link_libraries(robomotion ${catkin_LIBRARIES} pigpio rt pthread)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
@@ -161,11 +172,12 @@ target_link_libraries( vision_node
 # )
 
 ## Mark cpp header files for installation
-# install(DIRECTORY include/${PROJECT_NAME}/
-#   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
-#   FILES_MATCHING PATTERN "*.h"
-#   PATTERN ".svn" EXCLUDE
-# )
+install( DIRECTORY PIGPIO
+# DIRECTORY include/${PROJECT_NAME}/
+   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+   FILES_MATCHING PATTERN "*.h"
+   PATTERN ".svn" EXCLUDE
+)
 
 ## Mark other files for installation (e.g. launch and bag files, etc.)
 # install(FILES
