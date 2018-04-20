@@ -88,24 +88,33 @@ def initializeRobot(num):
 #note: currently only finds the top right and measures, but this will cause problems eventually
 #when the robots collide
 #note2: Need to fix initialization process to consistently run using OpenCV because of the error
+#note3: should create a class or struct called robot that contains simulation location,
+#real location, whether it's reached it's goal,
 #######
 
 #publish to real world
 def step(goalx, goaly):
+
 	for index, robotID in enumerate(robots):
 		coords = canvas.coords(robotID) #SIMULATED perfect position
-		vectorx = goalx - coords[0] +58 #simulated vector
-		vectory = goaly - coords[1] +58
-
-		distFromGoal = abs(math.sqrt(vectorx**2 + vectory**2))
-		print "goal in step:" + str(goalx) + ", " + str(goaly)
-		#print str(coords[0]) + " coords " + str(coords[1])
+		vectorx = goalx - ((coords[2] - coords[0])/2 + coords[0]) #simulated vector from center
+		vectory = goaly - ((coords[3] - coords[1])/2 + coords[1])
+		distFromGoal = abs(math.sqrt((vectorx)**2 + (vectory)**2))
+		#print "vector" + str(vectorx) + ", " + str(vectory)
 
 		kiwi = Kiwi()
-		kiwi.w1 = vectory * 100; #number is the duty cycle %
-		kiwi.w2 = -0.5 * vectorx - math.sqrt(1.5) * vectory * 100;
-		kiwi.w3 = -0.5 * vectorx + math.sqrt(1.5) * vectory * 100;
+		angle = robot_data[str(index) + "_angle"]
+		vx = math.cos(angle)*distFromGoal
+		vy = math.sin(angle)*distFromGoal
 
+		#get porportion
+		vx = vx / 800
+		vy = vy / 600
+
+		kiwi.w1 = vx * 100; #number is the duty cycle %. 100% when vx > 
+		kiwi.w2 = -0.5 * vx - math.sqrt(1.5) * vy * 100;
+		kiwi.w3 = -0.5 * vx + math.sqrt(1.5) * vy * 100;
+		#print "kiwi---" + str(kiwi.w1) + ", " + str(kiwi.w2) + ", " + str(kiwi.w3)
 		publishers[index].publish(kiwi)
 
 		if(distFromGoal < 100):
@@ -115,12 +124,10 @@ def step(goalx, goaly):
 			canvas.move(robotID, vectorx*.01, vectory*.01) 
 			cur_x = robot_data[str(index) + "_x"]
 			cur_y = robot_data[str(index) + "_y"]
-			cur_angle = robot_data[str(index) + "_angle"]
 			#canvas redraws what opencv sees, COMMENT IF NO CAMERA ATTACHED
 			#canvas.coords(robotID, cur_x-10, cur_y-10, cur_x+10, cur_y+10)
 			canvas.pack()
-	canvas.bind("<Button-1>", setGoal)
-	root.after(10, step, goalx, goaly)
+	root.after(200, step, goalx, goaly)
 
 print "about to call updateRobot"
 initializeRobot(0)

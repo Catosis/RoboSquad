@@ -1,4 +1,5 @@
-
+#!/usr/bin/env python
+from __future__ import division
 from scipy.spatial import distance as dist
 from imutils import perspective
 from imutils import contours
@@ -10,6 +11,9 @@ import matplotlib.pyplot as plt
 import os
 import time
 import math
+import rospy
+from squad.msg import robot_position_msg
+import time
 #import imutils
 
 def midpoint(ptA, ptB):
@@ -52,7 +56,7 @@ def get_angle(netPositionX, netPositionY):
     return angle1
 
 
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 cap.set(3,800)
 
 cap.set(4,800)
@@ -65,11 +69,20 @@ initial2 = False
 initial3 = False
 initial4 = False
 
+isRobot = False
+
+#ros publishers
+rospy.init_node('opencv', anonymous=True)
+pub0 = rospy.Publisher("robot0_cvpos", robot_position_msg, queue_size = 10)
+pub1 = rospy.Publisher("robot1_cvpos", robot_position_msg, queue_size = 10)
+pub2 = rospy.Publisher("robot2_cvpos", robot_position_msg, queue_size = 10)
+pub3 = rospy.Publisher("robot3_cvpos", robot_position_msg, queue_size = 10)
+
 while True:
     
     ret, img = cap.read()
     imgray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    ret,thresh = cv2.threshold(imgray,200,255,0)
+    ret,thresh = cv2.threshold(imgray,240,255,0)
     thresh = cv2.dilate(thresh, None, iterations=1)
     thresh = cv2.erode(thresh, None, iterations=1)
     img2, imgContours, hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
@@ -106,8 +119,8 @@ while True:
         maxArea = 0
         
 
-        print(hierarchy[0])
-        print(hierarchy[0][0])
+        #print(hierarchy[0])
+        #print(hierarchy[0][0])
 
         parent = 0
 
@@ -129,7 +142,7 @@ while True:
             #This loop draws all the direct children of the parent contour a different color from the parent
             while True:
 
-                print(hierarchy[0])
+                #print(hierarchy[0])
                 #Finding the biggest child contour in order to determine which contour to use to locate the front
                 #of the robot
                 currentArea = cv2.contourArea(imgContours[childorNext])
@@ -144,20 +157,25 @@ while True:
                         cx = int(M['m10']/M['m00'])
                         cy = int(M['m01']/M['m00'])
                         centroidPoint = (cx, cy)
-                cv2.drawContours(savedImageColor, imgContours, childorNext, (255,0,0), 3)
+               # cv2.drawContours(savedImageColor, imgContours, childorNext, (255,0,0), 3)
+                
+                if contourTotal > 1:
+                    cv2.drawContours(savedImageColor, imgContours, hierarchy[0][childorNext][1], (255,0,0), 3)
+                    cv2.drawContours(savedImageColor, imgContours, childorNext, (255,0,0), 3)
+                    isRobot = True
 
                 childorNext = hierarchy[0][childorNext][0]
 
-                print("contour Total", contourTotal)
+                #print("contour Total", contourTotal)
                 if childorNext == -1:
                     break
                 
                 contourTotal += 1
             
-            print("contour Total", contourTotal)
+            #print("contour Total", contourTotal)
             # Finding info to pass to ros for robot 2
             
-            if contourTotal == 2:
+            if contourTotal == 2 and isRobot == True:
                 #Prints Robot 2 at centroid position of the body
                 print("centroid point of robot 1", centroidPoint)
                 cv2.putText(savedImageColor, "Robot 1",
@@ -179,14 +197,15 @@ while True:
                 
                 angle1 = get_angle(netPositionX, netPositionY)
                 print("angle of robot 1 is", angle1)
-                if initial1 == False:
-                     with open("Initial_Output.txt", "a") as text_file:
-                         text_file.write("Centroid of robot 1: x position is %d, y position is %d\n" % (cx, cy))
-                         text_file.write("Net position of robot 1: x position is %d, y position is %d\n" % (netPositionX, netPositionY))
-                         text_file.write("Angle of robot 1: %d\n" % angle1)
-                     initial1 = True                    
+                     
+                infoRobot1 = (cx, cy, angle1)
+                msg = robot_position_msg()
+                msg.x = cx
+                msg.y = cy
+                msg.angle = angle1
+                pub0.publish(msg)
             
-            elif contourTotal == 3:
+            elif contourTotal == 3 and isRobot == True:
                 #Prints Robot 2 at centroid position of the body
                 print("centroid point of robot 2", centroidPoint)
                 cv2.putText(savedImageColor, "Robot 2",
@@ -210,15 +229,21 @@ while True:
                 
                 angle2 = get_angle(netPositionX, netPositionY)
                 print("angle of robot 2 is", angle2)
-                if initial2 == False:
-                     with open("Initial_Output.txt", "a") as text_file:
-                         text_file.write("Centroid of robot 2: x position is %d, y position is %d\n" % (cx, cy))
-                         text_file.write("Net position of robot 2: x position is %d, y position is %d\n" % (netPositionX, netPositionY))
-                         text_file.write("Angle of robot 2: %d\n" % angle2)
-                     initial2 = True             
+                strAngle2 = str(angle2)
+                cv2.putText(savedImageColor, strAngle2,
+        	       (100, 100), cv2.FONT_HERSHEY_SIMPLEX,
+                1, (0, 0, 255), 2)
+
+                
+                infoRobot2 = (cx, cy, angle2)
+                msg = robot_position_msg()
+                msg.x = cx
+                msg.y = cy
+                msg.angle = angle2
+                pub1.publish(msg)
                     
                 #Send centroid point of body and relative direction to ros
-            elif contourTotal == 4:
+            elif contourTotal == 4 and isRobot == True:
                 #Prints Robot 2 at centroid position of the body
                 print("centroid point of robot 3", centroidPoint)
                 cv2.putText(savedImageColor, "Robot 3",
@@ -240,14 +265,15 @@ while True:
                 
                 angle3 = get_angle(netPositionX, netPositionY)
                 print("angle of robot 3 is", angle3)
-                if initial3 == False:
-                     with open("Initial_Output.txt", "a") as text_file:
-                         text_file.write("Centroid of robot 3: x position is %d, y position is %d\n" % (cx, cy))
-                         text_file.write("Net position of robot 3: x position is %d, y position is %d\n" % (netPositionX, netPositionY))
-                         text_file.write("Angle of robot 3: %d\n" % angle3)
-                     initial3 = True
+                     
+                infoRobot3 = (cx, cy, angle3)
+                msg = robot_position_msg()
+                msg.x = cx
+                msg.y = cy
+                msg.angle = angle3
+                pub2.publish(msg)
             
-            elif contourTotal == 5:
+            elif contourTotal == 5 and isRobot == True:
                 #Prints Robot 2 at centroid position of the body
                 print("centroid point of robot 4", centroidPoint)
                 cv2.putText(savedImageColor, "Robot 4",
@@ -269,13 +295,13 @@ while True:
                 
                 angle4 = get_angle(netPositionX, netPositionY)
                 print("angle of robot 4 is", angle4)
-                if initial4 == False:
-                     with open("Initial_Output.txt", "a") as text_file:
-                         text_file.write("Centroid of robot 4: x position is %d, y position is %d\n" % (cx, cy))
-                         text_file.write("Net position of robot 4: x position is %d, y position is %d\n" % (netPositionX, netPositionY))
-                         text_file.write("Angle of robot 4: %d\n" % angle4)
-                     initial4 = True
-                
+                     
+                infoRobot4 = (cx, cy, angle4)
+                msg = robot_position_msg()
+                msg.x = cx
+                msg.y = cy
+                msg.angle = angle4
+                pub3.publish(msg)
                     
                 
             # Goes to the next parent in the same level (should be another robot body)
@@ -286,8 +312,9 @@ while True:
                 
             # Resets the contour total for the next robot body
             contourTotal = 1
+            isRobot = False
                 
-                
+        #time.sleep(1)      
         count += 1
         
 
@@ -307,5 +334,4 @@ while True:
     
 cv2.destroyAllWindows()
 cap.release()
-
 
