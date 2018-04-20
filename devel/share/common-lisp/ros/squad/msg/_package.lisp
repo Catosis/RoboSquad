@@ -3,5 +3,7 @@
   (:export
    "<KIWI>"
    "KIWI"
+   "<ROBOT_POSITION_MSG>"
+   "ROBOT_POSITION_MSG"
   ))
 

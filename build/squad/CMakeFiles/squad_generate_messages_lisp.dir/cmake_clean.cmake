@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/squad_generate_messages_lisp"
+  "/home/connie/robo_squad/devel/share/common-lisp/ros/squad/msg/robot_position_msg.lisp"
   "/home/connie/robo_squad/devel/share/common-lisp/ros/squad/msg/Kiwi.lisp"
 )
 

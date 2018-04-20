@@ -1,7 +1,0 @@
-#! /usr/bin/env python
-
-import packages.hello
-
-
-if __name__ == '__main__':
-    packages.hello.say('my friend!')

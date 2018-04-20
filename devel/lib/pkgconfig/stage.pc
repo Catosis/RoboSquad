@@ -1,0 +1,8 @@
+prefix=/home/connie/robo_squad/devel
+
+Name: stage
+Description: Description of stage
+Version: 0.0.17
+Cflags: 
+Libs: -L/home/connie/robo_squad/devel/lib 
+Requires: roscpp rospy std_msgs

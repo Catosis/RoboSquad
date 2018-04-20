@@ -74,9 +74,6 @@ void TeleopTurtle::keyLoop()
   char c;
   bool dirty=false;
 
-  char s_w1, s_w2, s_w3; 
-
-
   // get the console in raw mode                                                              
   tcgetattr(kfd, &cooked);
   memcpy(&raw, &cooked, sizeof(struct termios));
@@ -89,7 +86,7 @@ void TeleopTurtle::keyLoop()
   puts("Reading from keyboard");
   puts("---------------------------");
   puts("Use arrow keys to move the robot.");
-  puts("Clear wheel outputs using Q")
+  puts("Clear wheel outputs using Q");
 
 
   for(;;)
@@ -143,10 +140,9 @@ void TeleopTurtle::keyLoop()
     twist.linear.y = l_scale_*lineary_;
 
     squad::Kiwi kiwi;
-
-    s_w1 = linearx_ * 45; //constant is the duty cycle %
-    s_w2 = -0.5 * linearx_ - sqrt(3/2) * lineary_ * 45;
-    s_w3 = -0.5 * linearx_ + sqrt(3/2) * lineary_ * 45;
+    kiwi.w1 = linearx_ * 100; //constant is the duty cycle %
+    kiwi.w2 = -0.5 * linearx_ - sqrt(1.5) * lineary_ * 100;
+    kiwi.w3 = -0.5 * linearx_ + sqrt(1.5) * lineary_ * 100;
 
 
     if(dirty ==true)

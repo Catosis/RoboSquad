@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/connie/robo_squad/src/squad/msg/Kiwi.msg"
+messages_str = "/home/connie/robo_squad/src/squad/msg/Kiwi.msg;/home/connie/robo_squad/src/squad/msg/robot_position_msg.msg"
 services_str = ""
 pkg_name = "squad"
 dependencies_str = "std_msgs;geometry_msgs"

@@ -485,10 +485,10 @@ micros_swarm_gazebo_BINARY_DIR:STATIC=/home/connie/robo_squad/build/micros_swarm
 micros_swarm_gazebo_SOURCE_DIR:STATIC=/home/connie/robo_squad/src/micros_swarm_framework/tools/micros_swarm_gazebo
 
 //Value Computed by CMake
-micros_swarm_stage_BINARY_DIR:STATIC=/home/connie/robo_squad/build/micros_swarm_framework/tools/micros_swarm_stage
+micros_swarm_stage_BINARY_DIR:STATIC=/home/connie/robo_squad/build/stage
 
 //Value Computed by CMake
-micros_swarm_stage_SOURCE_DIR:STATIC=/home/connie/robo_squad/src/micros_swarm_framework/tools/micros_swarm_stage
+micros_swarm_stage_SOURCE_DIR:STATIC=/home/connie/robo_squad/src/stage
 
 //The directory containing a CMake configuration file for nav_msgs.
 nav_msgs_DIR:PATH=/opt/ros/kinetic/share/nav_msgs/cmake
@@ -561,6 +561,12 @@ squad_BINARY_DIR:STATIC=/home/connie/robo_squad/build/squad
 
 //Value Computed by CMake
 squad_SOURCE_DIR:STATIC=/home/connie/robo_squad/src/squad
+
+//Value Computed by CMake
+stage_BINARY_DIR:STATIC=/home/connie/robo_squad/build/stage
+
+//Value Computed by CMake
+stage_SOURCE_DIR:STATIC=/home/connie/robo_squad/src/stage
 
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/kinetic/share/std_msgs/cmake
@@ -763,7 +769,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

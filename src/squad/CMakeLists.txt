@@ -8,6 +8,7 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   genmsg
   geometry_msgs
+  message_generation
 )
 
 ## System dependencies are found with CMake's conventions
@@ -44,7 +45,7 @@ catkin_python_setup()
 add_message_files(
    FILES
    Kiwi.msg
-   #Message2.msg
+   robot_position_msg.msg
  )
 
 ## Generate services in the 'srv' folder

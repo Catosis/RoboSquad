@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/squad_generate_messages_nodejs"
+  "/home/connie/robo_squad/devel/share/gennodejs/ros/squad/msg/robot_position_msg.js"
   "/home/connie/robo_squad/devel/share/gennodejs/ros/squad/msg/Kiwi.js"
 )
 

@@ -53,20 +53,27 @@ CMAKE_BINARY_DIR = /home/connie/robo_squad/build
 # Include the progress variables for this target.
 include squad/CMakeFiles/squad_generate_messages_eus.dir/progress.make
 
+squad/CMakeFiles/squad_generate_messages_eus: /home/connie/robo_squad/devel/share/roseus/ros/squad/msg/robot_position_msg.l
 squad/CMakeFiles/squad_generate_messages_eus: /home/connie/robo_squad/devel/share/roseus/ros/squad/msg/Kiwi.l
 squad/CMakeFiles/squad_generate_messages_eus: /home/connie/robo_squad/devel/share/roseus/ros/squad/manifest.l
 
 
+/home/connie/robo_squad/devel/share/roseus/ros/squad/msg/robot_position_msg.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
+/home/connie/robo_squad/devel/share/roseus/ros/squad/msg/robot_position_msg.l: /home/connie/robo_squad/src/squad/msg/robot_position_msg.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from squad/robot_position_msg.msg"
+	cd /home/connie/robo_squad/build/squad && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/connie/robo_squad/src/squad/msg/robot_position_msg.msg -Isquad:/home/connie/robo_squad/src/squad/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -p squad -o /home/connie/robo_squad/devel/share/roseus/ros/squad/msg
+
 /home/connie/robo_squad/devel/share/roseus/ros/squad/msg/Kiwi.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
 /home/connie/robo_squad/devel/share/roseus/ros/squad/msg/Kiwi.l: /home/connie/robo_squad/src/squad/msg/Kiwi.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from squad/Kiwi.msg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from squad/Kiwi.msg"
 	cd /home/connie/robo_squad/build/squad && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/connie/robo_squad/src/squad/msg/Kiwi.msg -Isquad:/home/connie/robo_squad/src/squad/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -p squad -o /home/connie/robo_squad/devel/share/roseus/ros/squad/msg
 
 /home/connie/robo_squad/devel/share/roseus/ros/squad/manifest.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp manifest code for squad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp manifest code for squad"
 	cd /home/connie/robo_squad/build/squad && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/connie/robo_squad/devel/share/roseus/ros/squad squad std_msgs geometry_msgs
 
 squad_generate_messages_eus: squad/CMakeFiles/squad_generate_messages_eus
+squad_generate_messages_eus: /home/connie/robo_squad/devel/share/roseus/ros/squad/msg/robot_position_msg.l
 squad_generate_messages_eus: /home/connie/robo_squad/devel/share/roseus/ros/squad/msg/Kiwi.l
 squad_generate_messages_eus: /home/connie/robo_squad/devel/share/roseus/ros/squad/manifest.l
 squad_generate_messages_eus: squad/CMakeFiles/squad_generate_messages_eus.dir/build.make

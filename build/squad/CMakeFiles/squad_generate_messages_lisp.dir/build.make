@@ -53,15 +53,22 @@ CMAKE_BINARY_DIR = /home/connie/robo_squad/build
 # Include the progress variables for this target.
 include squad/CMakeFiles/squad_generate_messages_lisp.dir/progress.make
 
+squad/CMakeFiles/squad_generate_messages_lisp: /home/connie/robo_squad/devel/share/common-lisp/ros/squad/msg/robot_position_msg.lisp
 squad/CMakeFiles/squad_generate_messages_lisp: /home/connie/robo_squad/devel/share/common-lisp/ros/squad/msg/Kiwi.lisp
 
 
+/home/connie/robo_squad/devel/share/common-lisp/ros/squad/msg/robot_position_msg.lisp: /opt/ros/kinetic/lib/genlisp/gen_lisp.py
+/home/connie/robo_squad/devel/share/common-lisp/ros/squad/msg/robot_position_msg.lisp: /home/connie/robo_squad/src/squad/msg/robot_position_msg.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from squad/robot_position_msg.msg"
+	cd /home/connie/robo_squad/build/squad && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/connie/robo_squad/src/squad/msg/robot_position_msg.msg -Isquad:/home/connie/robo_squad/src/squad/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -p squad -o /home/connie/robo_squad/devel/share/common-lisp/ros/squad/msg
+
 /home/connie/robo_squad/devel/share/common-lisp/ros/squad/msg/Kiwi.lisp: /opt/ros/kinetic/lib/genlisp/gen_lisp.py
 /home/connie/robo_squad/devel/share/common-lisp/ros/squad/msg/Kiwi.lisp: /home/connie/robo_squad/src/squad/msg/Kiwi.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from squad/Kiwi.msg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from squad/Kiwi.msg"
 	cd /home/connie/robo_squad/build/squad && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/connie/robo_squad/src/squad/msg/Kiwi.msg -Isquad:/home/connie/robo_squad/src/squad/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -p squad -o /home/connie/robo_squad/devel/share/common-lisp/ros/squad/msg
 
 squad_generate_messages_lisp: squad/CMakeFiles/squad_generate_messages_lisp
+squad_generate_messages_lisp: /home/connie/robo_squad/devel/share/common-lisp/ros/squad/msg/robot_position_msg.lisp
 squad_generate_messages_lisp: /home/connie/robo_squad/devel/share/common-lisp/ros/squad/msg/Kiwi.lisp
 squad_generate_messages_lisp: squad/CMakeFiles/squad_generate_messages_lisp.dir/build.make
 

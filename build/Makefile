@@ -400,6 +400,19 @@ squad_generate_messages_cpp/fast:
 .PHONY : squad_generate_messages_cpp/fast
 
 #=============================================================================
+# Target rules for targets named _squad_generate_messages_check_deps_Kiwi
+
+# Build rule for target.
+_squad_generate_messages_check_deps_Kiwi: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _squad_generate_messages_check_deps_Kiwi
+.PHONY : _squad_generate_messages_check_deps_Kiwi
+
+# fast build rule for target.
+_squad_generate_messages_check_deps_Kiwi/fast:
+	$(MAKE) -f squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/build.make squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/build
+.PHONY : _squad_generate_messages_check_deps_Kiwi/fast
+
+#=============================================================================
 # Target rules for targets named std_msgs_generate_messages_py
 
 # Build rule for target.
@@ -660,19 +673,6 @@ std_msgs_generate_messages_lisp/fast:
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 #=============================================================================
-# Target rules for targets named _squad_generate_messages_check_deps_Kiwi
-
-# Build rule for target.
-_squad_generate_messages_check_deps_Kiwi: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _squad_generate_messages_check_deps_Kiwi
-.PHONY : _squad_generate_messages_check_deps_Kiwi
-
-# fast build rule for target.
-_squad_generate_messages_check_deps_Kiwi/fast:
-	$(MAKE) -f squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/build.make squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/build
-.PHONY : _squad_generate_messages_check_deps_Kiwi/fast
-
-#=============================================================================
 # Target rules for targets named geometry_msgs_generate_messages_py
 
 # Build rule for target.
@@ -711,6 +711,32 @@ squad_generate_messages/fast:
 	$(MAKE) -f squad/CMakeFiles/squad_generate_messages.dir/build.make squad/CMakeFiles/squad_generate_messages.dir/build
 .PHONY : squad_generate_messages/fast
 
+#=============================================================================
+# Target rules for targets named _squad_generate_messages_check_deps_robot_position_msg
+
+# Build rule for target.
+_squad_generate_messages_check_deps_robot_position_msg: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _squad_generate_messages_check_deps_robot_position_msg
+.PHONY : _squad_generate_messages_check_deps_robot_position_msg
+
+# fast build rule for target.
+_squad_generate_messages_check_deps_robot_position_msg/fast:
+	$(MAKE) -f squad/CMakeFiles/_squad_generate_messages_check_deps_robot_position_msg.dir/build.make squad/CMakeFiles/_squad_generate_messages_check_deps_robot_position_msg.dir/build
+.PHONY : _squad_generate_messages_check_deps_robot_position_msg/fast
+
+#=============================================================================
+# Target rules for targets named rand_world
+
+# Build rule for target.
+rand_world: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rand_world
+.PHONY : rand_world
+
+# fast build rule for target.
+rand_world/fast:
+	$(MAKE) -f stage/CMakeFiles/rand_world.dir/build.make stage/CMakeFiles/rand_world.dir/build
+.PHONY : rand_world/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -742,6 +768,7 @@ help:
 	@echo "... squad_generate_messages_lisp"
 	@echo "... squad_geneus"
 	@echo "... squad_generate_messages_cpp"
+	@echo "... _squad_generate_messages_check_deps_Kiwi"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... squad_generate_messages_eus"
@@ -762,10 +789,11 @@ help:
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... _squad_generate_messages_check_deps_Kiwi"
 	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... squad_generate_messages"
+	@echo "... _squad_generate_messages_check_deps_robot_position_msg"
+	@echo "... rand_world"
 .PHONY : help
 
 

@@ -53,16 +53,24 @@ CMAKE_BINARY_DIR = /home/connie/robo_squad/build
 # Include the progress variables for this target.
 include squad/CMakeFiles/squad_generate_messages_cpp.dir/progress.make
 
+squad/CMakeFiles/squad_generate_messages_cpp: /home/connie/robo_squad/devel/include/squad/robot_position_msg.h
 squad/CMakeFiles/squad_generate_messages_cpp: /home/connie/robo_squad/devel/include/squad/Kiwi.h
 
+
+/home/connie/robo_squad/devel/include/squad/robot_position_msg.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
+/home/connie/robo_squad/devel/include/squad/robot_position_msg.h: /home/connie/robo_squad/src/squad/msg/robot_position_msg.msg
+/home/connie/robo_squad/devel/include/squad/robot_position_msg.h: /opt/ros/kinetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from squad/robot_position_msg.msg"
+	cd /home/connie/robo_squad/build/squad && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/connie/robo_squad/src/squad/msg/robot_position_msg.msg -Isquad:/home/connie/robo_squad/src/squad/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -p squad -o /home/connie/robo_squad/devel/include/squad -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 /home/connie/robo_squad/devel/include/squad/Kiwi.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
 /home/connie/robo_squad/devel/include/squad/Kiwi.h: /home/connie/robo_squad/src/squad/msg/Kiwi.msg
 /home/connie/robo_squad/devel/include/squad/Kiwi.h: /opt/ros/kinetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from squad/Kiwi.msg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from squad/Kiwi.msg"
 	cd /home/connie/robo_squad/build/squad && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/connie/robo_squad/src/squad/msg/Kiwi.msg -Isquad:/home/connie/robo_squad/src/squad/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -p squad -o /home/connie/robo_squad/devel/include/squad -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 squad_generate_messages_cpp: squad/CMakeFiles/squad_generate_messages_cpp
+squad_generate_messages_cpp: /home/connie/robo_squad/devel/include/squad/robot_position_msg.h
 squad_generate_messages_cpp: /home/connie/robo_squad/devel/include/squad/Kiwi.h
 squad_generate_messages_cpp: squad/CMakeFiles/squad_generate_messages_cpp.dir/build.make
 

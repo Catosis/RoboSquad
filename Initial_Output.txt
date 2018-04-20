@@ -1,0 +1,16 @@
+Centroid of robot 3: x position is 599, y position is 204
+Net position of robot 3: x position is -10, y position is -10
+Centroid of robot 2: x position is 584, y position is 66
+Net position of robot 2: x position is 113, y position is 76
+Centroid of robot 4: x position is 599, y position is 204
+Net position of robot 4: x position is -10, y position is -10
+Centroid of robot 1: x position is 379, y position is 231
+Net position of robot 1: x position is -3, y position is -14
+Centroid of robot 1: x position is 181, y position is 237
+Net position of robot 1: x position is 22, y position is -11
+Centroid of robot 4: x position is 599, y position is 205
+Net position of robot 4: x position is -10, y position is -11
+Centroid of robot 3: x position is 599, y position is 205
+Net position of robot 3: x position is -10, y position is -11
+Centroid of robot 2: x position is 584, y position is 66
+Net position of robot 2: x position is 111, y position is 76

@@ -67,7 +67,7 @@ set(micros_swarm_stage_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(micros_swarm_stage_SOURCE_PREFIX /home/connie/robo_squad/src/micros_swarm_framework/tools/micros_swarm_stage)
+  set(micros_swarm_stage_SOURCE_PREFIX /home/connie/robo_squad/src/stage)
   set(micros_swarm_stage_DEVEL_PREFIX /home/connie/robo_squad/devel)
   set(micros_swarm_stage_INSTALL_PREFIX "")
   set(micros_swarm_stage_PREFIX ${micros_swarm_stage_DEVEL_PREFIX})
@@ -110,7 +110,7 @@ if(NOT " " STREQUAL " ")
         message(FATAL_ERROR "Project 'micros_swarm_stage' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'micros_swarm_stage' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/connie/robo_squad/src/micros_swarm_framework/tools/micros_swarm_stage/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'micros_swarm_stage' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/connie/robo_squad/src/stage/${idir}'.  ${_report}")
     endif()
     _list_append_unique(micros_swarm_stage_INCLUDE_DIRS ${include})
   endforeach()
@@ -129,7 +129,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/connie/robo_squad/devel/lib;/home/connie/robo_squad/devel/lib;/home/connie/catkin_ws/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/connie/robo_squad/devel/lib;/home/connie/robo_squad/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

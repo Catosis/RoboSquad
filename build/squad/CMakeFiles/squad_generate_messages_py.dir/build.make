@@ -53,21 +53,29 @@ CMAKE_BINARY_DIR = /home/connie/robo_squad/build
 # Include the progress variables for this target.
 include squad/CMakeFiles/squad_generate_messages_py.dir/progress.make
 
+squad/CMakeFiles/squad_generate_messages_py: /home/connie/robo_squad/devel/lib/python2.7/dist-packages/squad/msg/_robot_position_msg.py
 squad/CMakeFiles/squad_generate_messages_py: /home/connie/robo_squad/devel/lib/python2.7/dist-packages/squad/msg/_Kiwi.py
 squad/CMakeFiles/squad_generate_messages_py: /home/connie/robo_squad/devel/lib/python2.7/dist-packages/squad/msg/__init__.py
 
 
+/home/connie/robo_squad/devel/lib/python2.7/dist-packages/squad/msg/_robot_position_msg.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
+/home/connie/robo_squad/devel/lib/python2.7/dist-packages/squad/msg/_robot_position_msg.py: /home/connie/robo_squad/src/squad/msg/robot_position_msg.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG squad/robot_position_msg"
+	cd /home/connie/robo_squad/build/squad && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/connie/robo_squad/src/squad/msg/robot_position_msg.msg -Isquad:/home/connie/robo_squad/src/squad/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -p squad -o /home/connie/robo_squad/devel/lib/python2.7/dist-packages/squad/msg
+
 /home/connie/robo_squad/devel/lib/python2.7/dist-packages/squad/msg/_Kiwi.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
 /home/connie/robo_squad/devel/lib/python2.7/dist-packages/squad/msg/_Kiwi.py: /home/connie/robo_squad/src/squad/msg/Kiwi.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG squad/Kiwi"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG squad/Kiwi"
 	cd /home/connie/robo_squad/build/squad && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/connie/robo_squad/src/squad/msg/Kiwi.msg -Isquad:/home/connie/robo_squad/src/squad/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -p squad -o /home/connie/robo_squad/devel/lib/python2.7/dist-packages/squad/msg
 
 /home/connie/robo_squad/devel/lib/python2.7/dist-packages/squad/msg/__init__.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
+/home/connie/robo_squad/devel/lib/python2.7/dist-packages/squad/msg/__init__.py: /home/connie/robo_squad/devel/lib/python2.7/dist-packages/squad/msg/_robot_position_msg.py
 /home/connie/robo_squad/devel/lib/python2.7/dist-packages/squad/msg/__init__.py: /home/connie/robo_squad/devel/lib/python2.7/dist-packages/squad/msg/_Kiwi.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python msg __init__.py for squad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python msg __init__.py for squad"
 	cd /home/connie/robo_squad/build/squad && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/connie/robo_squad/devel/lib/python2.7/dist-packages/squad/msg --initpy
 
 squad_generate_messages_py: squad/CMakeFiles/squad_generate_messages_py
+squad_generate_messages_py: /home/connie/robo_squad/devel/lib/python2.7/dist-packages/squad/msg/_robot_position_msg.py
 squad_generate_messages_py: /home/connie/robo_squad/devel/lib/python2.7/dist-packages/squad/msg/_Kiwi.py
 squad_generate_messages_py: /home/connie/robo_squad/devel/lib/python2.7/dist-packages/squad/msg/__init__.py
 squad_generate_messages_py: squad/CMakeFiles/squad_generate_messages_py.dir/build.make

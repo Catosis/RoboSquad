@@ -37,7 +37,10 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/squad/msg" TYPE FILE FILES "/home/connie/robo_squad/src/squad/msg/Kiwi.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/squad/msg" TYPE FILE FILES
+    "/home/connie/robo_squad/src/squad/msg/Kiwi.msg"
+    "/home/connie/robo_squad/src/squad/msg/robot_position_msg.msg"
+    )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")

@@ -325,6 +325,7 @@ squad/clean: squad/CMakeFiles/controls_node.dir/clean
 squad/clean: squad/CMakeFiles/squad_generate_messages_lisp.dir/clean
 squad/clean: squad/CMakeFiles/squad_geneus.dir/clean
 squad/clean: squad/CMakeFiles/squad_generate_messages_cpp.dir/clean
+squad/clean: squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/clean
 squad/clean: squad/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 squad/clean: squad/CMakeFiles/roscpp_generate_messages_py.dir/clean
 squad/clean: squad/CMakeFiles/squad_generate_messages_eus.dir/clean
@@ -345,10 +346,10 @@ squad/clean: squad/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
 squad/clean: squad/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
 squad/clean: squad/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
 squad/clean: squad/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
-squad/clean: squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/clean
 squad/clean: squad/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
 squad/clean: squad/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
 squad/clean: squad/CMakeFiles/squad_generate_messages.dir/clean
+squad/clean: squad/CMakeFiles/_squad_generate_messages_check_deps_robot_position_msg.dir/clean
 
 .PHONY : squad/clean
 
@@ -364,7 +365,7 @@ squad/preinstall:
 squad/CMakeFiles/teleop.dir/all:
 	$(MAKE) -f squad/CMakeFiles/teleop.dir/build.make squad/CMakeFiles/teleop.dir/depend
 	$(MAKE) -f squad/CMakeFiles/teleop.dir/build.make squad/CMakeFiles/teleop.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num=14,15 "Built target teleop"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num=21,22 "Built target teleop"
 .PHONY : squad/CMakeFiles/teleop.dir/all
 
 # Include target in all.
@@ -401,7 +402,7 @@ clean: squad/CMakeFiles/teleop.dir/clean
 squad/CMakeFiles/vision_node.dir/all:
 	$(MAKE) -f squad/CMakeFiles/vision_node.dir/build.make squad/CMakeFiles/vision_node.dir/depend
 	$(MAKE) -f squad/CMakeFiles/vision_node.dir/build.make squad/CMakeFiles/vision_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num=16,17 "Built target vision_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num=23,24 "Built target vision_node"
 .PHONY : squad/CMakeFiles/vision_node.dir/all
 
 # Include target in all.
@@ -443,7 +444,7 @@ squad/CMakeFiles/squad_genpy.dir/all: squad/CMakeFiles/squad_generate_messages_p
 
 # Build rule for subdir invocation for target.
 squad/CMakeFiles/squad_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 squad/CMakeFiles/squad_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 0
 .PHONY : squad/CMakeFiles/squad_genpy.dir/rule
@@ -467,17 +468,18 @@ clean: squad/CMakeFiles/squad_genpy.dir/clean
 # Target rules for target squad/CMakeFiles/squad_generate_messages_py.dir
 
 # All Build rule for target.
-squad/CMakeFiles/squad_generate_messages_py.dir/all: squad/CMakeFiles/std_msgs_generate_messages_py.dir/all
 squad/CMakeFiles/squad_generate_messages_py.dir/all: squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/all
+squad/CMakeFiles/squad_generate_messages_py.dir/all: squad/CMakeFiles/std_msgs_generate_messages_py.dir/all
 squad/CMakeFiles/squad_generate_messages_py.dir/all: squad/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+squad/CMakeFiles/squad_generate_messages_py.dir/all: squad/CMakeFiles/_squad_generate_messages_check_deps_robot_position_msg.dir/all
 	$(MAKE) -f squad/CMakeFiles/squad_generate_messages_py.dir/build.make squad/CMakeFiles/squad_generate_messages_py.dir/depend
 	$(MAKE) -f squad/CMakeFiles/squad_generate_messages_py.dir/build.make squad/CMakeFiles/squad_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num=12,13 "Built target squad_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num=18,19,20 "Built target squad_generate_messages_py"
 .PHONY : squad/CMakeFiles/squad_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 squad/CMakeFiles/squad_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 squad/CMakeFiles/squad_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 0
 .PHONY : squad/CMakeFiles/squad_generate_messages_py.dir/rule
@@ -509,7 +511,7 @@ squad/CMakeFiles/squad_gennodejs.dir/all: squad/CMakeFiles/squad_generate_messag
 
 # Build rule for subdir invocation for target.
 squad/CMakeFiles/squad_gennodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 squad/CMakeFiles/squad_gennodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 0
 .PHONY : squad/CMakeFiles/squad_gennodejs.dir/rule
@@ -533,17 +535,18 @@ clean: squad/CMakeFiles/squad_gennodejs.dir/clean
 # Target rules for target squad/CMakeFiles/squad_generate_messages_nodejs.dir
 
 # All Build rule for target.
-squad/CMakeFiles/squad_generate_messages_nodejs.dir/all: squad/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
 squad/CMakeFiles/squad_generate_messages_nodejs.dir/all: squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/all
+squad/CMakeFiles/squad_generate_messages_nodejs.dir/all: squad/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
 squad/CMakeFiles/squad_generate_messages_nodejs.dir/all: squad/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
+squad/CMakeFiles/squad_generate_messages_nodejs.dir/all: squad/CMakeFiles/_squad_generate_messages_check_deps_robot_position_msg.dir/all
 	$(MAKE) -f squad/CMakeFiles/squad_generate_messages_nodejs.dir/build.make squad/CMakeFiles/squad_generate_messages_nodejs.dir/depend
 	$(MAKE) -f squad/CMakeFiles/squad_generate_messages_nodejs.dir/build.make squad/CMakeFiles/squad_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num=11 "Built target squad_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num=16,17 "Built target squad_generate_messages_nodejs"
 .PHONY : squad/CMakeFiles/squad_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 squad/CMakeFiles/squad_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 squad/CMakeFiles/squad_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 0
 .PHONY : squad/CMakeFiles/squad_generate_messages_nodejs.dir/rule
@@ -575,7 +578,7 @@ squad/CMakeFiles/squad_genlisp.dir/all: squad/CMakeFiles/squad_generate_messages
 
 # Build rule for subdir invocation for target.
 squad/CMakeFiles/squad_genlisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 squad/CMakeFiles/squad_genlisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 0
 .PHONY : squad/CMakeFiles/squad_genlisp.dir/rule
@@ -636,17 +639,18 @@ clean: squad/CMakeFiles/controls_node.dir/clean
 # Target rules for target squad/CMakeFiles/squad_generate_messages_lisp.dir
 
 # All Build rule for target.
+squad/CMakeFiles/squad_generate_messages_lisp.dir/all: squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/all
 squad/CMakeFiles/squad_generate_messages_lisp.dir/all: squad/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
 squad/CMakeFiles/squad_generate_messages_lisp.dir/all: squad/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-squad/CMakeFiles/squad_generate_messages_lisp.dir/all: squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/all
+squad/CMakeFiles/squad_generate_messages_lisp.dir/all: squad/CMakeFiles/_squad_generate_messages_check_deps_robot_position_msg.dir/all
 	$(MAKE) -f squad/CMakeFiles/squad_generate_messages_lisp.dir/build.make squad/CMakeFiles/squad_generate_messages_lisp.dir/depend
 	$(MAKE) -f squad/CMakeFiles/squad_generate_messages_lisp.dir/build.make squad/CMakeFiles/squad_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num=10 "Built target squad_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num=14,15 "Built target squad_generate_messages_lisp"
 .PHONY : squad/CMakeFiles/squad_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 squad/CMakeFiles/squad_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 squad/CMakeFiles/squad_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 0
 .PHONY : squad/CMakeFiles/squad_generate_messages_lisp.dir/rule
@@ -678,7 +682,7 @@ squad/CMakeFiles/squad_geneus.dir/all: squad/CMakeFiles/squad_generate_messages_
 
 # Build rule for subdir invocation for target.
 squad/CMakeFiles/squad_geneus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 squad/CMakeFiles/squad_geneus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 0
 .PHONY : squad/CMakeFiles/squad_geneus.dir/rule
@@ -702,17 +706,18 @@ clean: squad/CMakeFiles/squad_geneus.dir/clean
 # Target rules for target squad/CMakeFiles/squad_generate_messages_cpp.dir
 
 # All Build rule for target.
+squad/CMakeFiles/squad_generate_messages_cpp.dir/all: squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/all
 squad/CMakeFiles/squad_generate_messages_cpp.dir/all: squad/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 squad/CMakeFiles/squad_generate_messages_cpp.dir/all: squad/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
-squad/CMakeFiles/squad_generate_messages_cpp.dir/all: squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/all
+squad/CMakeFiles/squad_generate_messages_cpp.dir/all: squad/CMakeFiles/_squad_generate_messages_check_deps_robot_position_msg.dir/all
 	$(MAKE) -f squad/CMakeFiles/squad_generate_messages_cpp.dir/build.make squad/CMakeFiles/squad_generate_messages_cpp.dir/depend
 	$(MAKE) -f squad/CMakeFiles/squad_generate_messages_cpp.dir/build.make squad/CMakeFiles/squad_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num=7 "Built target squad_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num=9,10 "Built target squad_generate_messages_cpp"
 .PHONY : squad/CMakeFiles/squad_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 squad/CMakeFiles/squad_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 squad/CMakeFiles/squad_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 0
 .PHONY : squad/CMakeFiles/squad_generate_messages_cpp.dir/rule
@@ -729,6 +734,38 @@ squad/CMakeFiles/squad_generate_messages_cpp.dir/clean:
 
 # clean rule for target.
 clean: squad/CMakeFiles/squad_generate_messages_cpp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir
+
+# All Build rule for target.
+squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/all:
+	$(MAKE) -f squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/build.make squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/depend
+	$(MAKE) -f squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/build.make squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num= "Built target _squad_generate_messages_check_deps_Kiwi"
+.PHONY : squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/all
+
+# Build rule for subdir invocation for target.
+squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 0
+.PHONY : squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/rule
+
+# Convenience name for target.
+_squad_generate_messages_check_deps_Kiwi: squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/rule
+
+.PHONY : _squad_generate_messages_check_deps_Kiwi
+
+# clean rule for target.
+squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/clean:
+	$(MAKE) -f squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/build.make squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/clean
+.PHONY : squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/clean
+
+# clean rule for target.
+clean: squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/clean
 
 .PHONY : clean
 
@@ -800,17 +837,18 @@ clean: squad/CMakeFiles/roscpp_generate_messages_py.dir/clean
 # Target rules for target squad/CMakeFiles/squad_generate_messages_eus.dir
 
 # All Build rule for target.
+squad/CMakeFiles/squad_generate_messages_eus.dir/all: squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/all
 squad/CMakeFiles/squad_generate_messages_eus.dir/all: squad/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
 squad/CMakeFiles/squad_generate_messages_eus.dir/all: squad/CMakeFiles/std_msgs_generate_messages_eus.dir/all
-squad/CMakeFiles/squad_generate_messages_eus.dir/all: squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/all
+squad/CMakeFiles/squad_generate_messages_eus.dir/all: squad/CMakeFiles/_squad_generate_messages_check_deps_robot_position_msg.dir/all
 	$(MAKE) -f squad/CMakeFiles/squad_generate_messages_eus.dir/build.make squad/CMakeFiles/squad_generate_messages_eus.dir/depend
 	$(MAKE) -f squad/CMakeFiles/squad_generate_messages_eus.dir/build.make squad/CMakeFiles/squad_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num=8,9 "Built target squad_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num=11,12,13 "Built target squad_generate_messages_eus"
 .PHONY : squad/CMakeFiles/squad_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 squad/CMakeFiles/squad_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 squad/CMakeFiles/squad_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 0
 .PHONY : squad/CMakeFiles/squad_generate_messages_eus.dir/rule
@@ -1194,7 +1232,7 @@ squad/CMakeFiles/squad_gencpp.dir/all: squad/CMakeFiles/squad_generate_messages_
 
 # Build rule for subdir invocation for target.
 squad/CMakeFiles/squad_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 squad/CMakeFiles/squad_gencpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 0
 .PHONY : squad/CMakeFiles/squad_gencpp.dir/rule
@@ -1375,38 +1413,6 @@ clean: squad/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir
-
-# All Build rule for target.
-squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/all:
-	$(MAKE) -f squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/build.make squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/depend
-	$(MAKE) -f squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/build.make squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num= "Built target _squad_generate_messages_check_deps_Kiwi"
-.PHONY : squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/all
-
-# Build rule for subdir invocation for target.
-squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 0
-.PHONY : squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/rule
-
-# Convenience name for target.
-_squad_generate_messages_check_deps_Kiwi: squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/rule
-
-.PHONY : _squad_generate_messages_check_deps_Kiwi
-
-# clean rule for target.
-squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/clean:
-	$(MAKE) -f squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/build.make squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/clean
-.PHONY : squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/clean
-
-# clean rule for target.
-clean: squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target squad/CMakeFiles/geometry_msgs_generate_messages_py.dir
 
 # All Build rule for target.
@@ -1491,7 +1497,7 @@ all: squad/CMakeFiles/squad_generate_messages.dir/all
 
 # Build rule for subdir invocation for target.
 squad/CMakeFiles/squad_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 12
 	$(MAKE) -f CMakeFiles/Makefile2 squad/CMakeFiles/squad_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 0
 .PHONY : squad/CMakeFiles/squad_generate_messages.dir/rule
@@ -1508,6 +1514,93 @@ squad/CMakeFiles/squad_generate_messages.dir/clean:
 
 # clean rule for target.
 clean: squad/CMakeFiles/squad_generate_messages.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target squad/CMakeFiles/_squad_generate_messages_check_deps_robot_position_msg.dir
+
+# All Build rule for target.
+squad/CMakeFiles/_squad_generate_messages_check_deps_robot_position_msg.dir/all:
+	$(MAKE) -f squad/CMakeFiles/_squad_generate_messages_check_deps_robot_position_msg.dir/build.make squad/CMakeFiles/_squad_generate_messages_check_deps_robot_position_msg.dir/depend
+	$(MAKE) -f squad/CMakeFiles/_squad_generate_messages_check_deps_robot_position_msg.dir/build.make squad/CMakeFiles/_squad_generate_messages_check_deps_robot_position_msg.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num= "Built target _squad_generate_messages_check_deps_robot_position_msg"
+.PHONY : squad/CMakeFiles/_squad_generate_messages_check_deps_robot_position_msg.dir/all
+
+# Build rule for subdir invocation for target.
+squad/CMakeFiles/_squad_generate_messages_check_deps_robot_position_msg.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 squad/CMakeFiles/_squad_generate_messages_check_deps_robot_position_msg.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 0
+.PHONY : squad/CMakeFiles/_squad_generate_messages_check_deps_robot_position_msg.dir/rule
+
+# Convenience name for target.
+_squad_generate_messages_check_deps_robot_position_msg: squad/CMakeFiles/_squad_generate_messages_check_deps_robot_position_msg.dir/rule
+
+.PHONY : _squad_generate_messages_check_deps_robot_position_msg
+
+# clean rule for target.
+squad/CMakeFiles/_squad_generate_messages_check_deps_robot_position_msg.dir/clean:
+	$(MAKE) -f squad/CMakeFiles/_squad_generate_messages_check_deps_robot_position_msg.dir/build.make squad/CMakeFiles/_squad_generate_messages_check_deps_robot_position_msg.dir/clean
+.PHONY : squad/CMakeFiles/_squad_generate_messages_check_deps_robot_position_msg.dir/clean
+
+# clean rule for target.
+clean: squad/CMakeFiles/_squad_generate_messages_check_deps_robot_position_msg.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory stage
+
+# Convenience name for "all" pass in the directory.
+stage/all: stage/CMakeFiles/rand_world.dir/all
+
+.PHONY : stage/all
+
+# Convenience name for "clean" pass in the directory.
+stage/clean: stage/CMakeFiles/rand_world.dir/clean
+
+.PHONY : stage/clean
+
+# Convenience name for "preinstall" pass in the directory.
+stage/preinstall:
+
+.PHONY : stage/preinstall
+
+#=============================================================================
+# Target rules for target stage/CMakeFiles/rand_world.dir
+
+# All Build rule for target.
+stage/CMakeFiles/rand_world.dir/all:
+	$(MAKE) -f stage/CMakeFiles/rand_world.dir/build.make stage/CMakeFiles/rand_world.dir/depend
+	$(MAKE) -f stage/CMakeFiles/rand_world.dir/build.make stage/CMakeFiles/rand_world.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/connie/robo_squad/build/CMakeFiles --progress-num=7,8 "Built target rand_world"
+.PHONY : stage/CMakeFiles/rand_world.dir/all
+
+# Include target in all.
+all: stage/CMakeFiles/rand_world.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+stage/CMakeFiles/rand_world.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 stage/CMakeFiles/rand_world.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/connie/robo_squad/build/CMakeFiles 0
+.PHONY : stage/CMakeFiles/rand_world.dir/rule
+
+# Convenience name for target.
+rand_world: stage/CMakeFiles/rand_world.dir/rule
+
+.PHONY : rand_world
+
+# clean rule for target.
+stage/CMakeFiles/rand_world.dir/clean:
+	$(MAKE) -f stage/CMakeFiles/rand_world.dir/build.make stage/CMakeFiles/rand_world.dir/clean
+.PHONY : stage/CMakeFiles/rand_world.dir/clean
+
+# clean rule for target.
+clean: stage/CMakeFiles/rand_world.dir/clean
 
 .PHONY : clean
 

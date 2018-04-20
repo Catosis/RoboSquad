@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/squad_generate_messages_eus"
+  "/home/connie/robo_squad/devel/share/roseus/ros/squad/msg/robot_position_msg.l"
   "/home/connie/robo_squad/devel/share/roseus/ros/squad/msg/Kiwi.l"
   "/home/connie/robo_squad/devel/share/roseus/ros/squad/manifest.l"
 )

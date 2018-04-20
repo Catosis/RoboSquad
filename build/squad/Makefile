@@ -331,6 +331,21 @@ squad_generate_messages_cpp/fast:
 .PHONY : squad_generate_messages_cpp/fast
 
 # Convenience name for target.
+squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/rule:
+	cd /home/connie/robo_squad/build && $(MAKE) -f CMakeFiles/Makefile2 squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/rule
+.PHONY : squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/rule
+
+# Convenience name for target.
+_squad_generate_messages_check_deps_Kiwi: squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/rule
+
+.PHONY : _squad_generate_messages_check_deps_Kiwi
+
+# fast build rule for target.
+_squad_generate_messages_check_deps_Kiwi/fast:
+	cd /home/connie/robo_squad/build && $(MAKE) -f squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/build.make squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/build
+.PHONY : _squad_generate_messages_check_deps_Kiwi/fast
+
+# Convenience name for target.
 squad/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
 	cd /home/connie/robo_squad/build && $(MAKE) -f CMakeFiles/Makefile2 squad/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 .PHONY : squad/CMakeFiles/std_msgs_generate_messages_py.dir/rule
@@ -631,21 +646,6 @@ std_msgs_generate_messages_lisp/fast:
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
-squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/rule:
-	cd /home/connie/robo_squad/build && $(MAKE) -f CMakeFiles/Makefile2 squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/rule
-.PHONY : squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/rule
-
-# Convenience name for target.
-_squad_generate_messages_check_deps_Kiwi: squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/rule
-
-.PHONY : _squad_generate_messages_check_deps_Kiwi
-
-# fast build rule for target.
-_squad_generate_messages_check_deps_Kiwi/fast:
-	cd /home/connie/robo_squad/build && $(MAKE) -f squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/build.make squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir/build
-.PHONY : _squad_generate_messages_check_deps_Kiwi/fast
-
-# Convenience name for target.
 squad/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
 	cd /home/connie/robo_squad/build && $(MAKE) -f CMakeFiles/Makefile2 squad/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
 .PHONY : squad/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
@@ -689,6 +689,21 @@ squad_generate_messages: squad/CMakeFiles/squad_generate_messages.dir/rule
 squad_generate_messages/fast:
 	cd /home/connie/robo_squad/build && $(MAKE) -f squad/CMakeFiles/squad_generate_messages.dir/build.make squad/CMakeFiles/squad_generate_messages.dir/build
 .PHONY : squad_generate_messages/fast
+
+# Convenience name for target.
+squad/CMakeFiles/_squad_generate_messages_check_deps_robot_position_msg.dir/rule:
+	cd /home/connie/robo_squad/build && $(MAKE) -f CMakeFiles/Makefile2 squad/CMakeFiles/_squad_generate_messages_check_deps_robot_position_msg.dir/rule
+.PHONY : squad/CMakeFiles/_squad_generate_messages_check_deps_robot_position_msg.dir/rule
+
+# Convenience name for target.
+_squad_generate_messages_check_deps_robot_position_msg: squad/CMakeFiles/_squad_generate_messages_check_deps_robot_position_msg.dir/rule
+
+.PHONY : _squad_generate_messages_check_deps_robot_position_msg
+
+# fast build rule for target.
+_squad_generate_messages_check_deps_robot_position_msg/fast:
+	cd /home/connie/robo_squad/build && $(MAKE) -f squad/CMakeFiles/_squad_generate_messages_check_deps_robot_position_msg.dir/build.make squad/CMakeFiles/_squad_generate_messages_check_deps_robot_position_msg.dir/build
+.PHONY : _squad_generate_messages_check_deps_robot_position_msg/fast
 
 src/controls.o: src/controls.cpp.o
 
@@ -795,6 +810,7 @@ help:
 	@echo "... squad_generate_messages_lisp"
 	@echo "... squad_geneus"
 	@echo "... squad_generate_messages_cpp"
+	@echo "... _squad_generate_messages_check_deps_Kiwi"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... squad_generate_messages_eus"
@@ -815,10 +831,10 @@ help:
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... _squad_generate_messages_check_deps_Kiwi"
 	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... squad_generate_messages"
+	@echo "... _squad_generate_messages_check_deps_robot_position_msg"
 	@echo "... src/controls.o"
 	@echo "... src/controls.i"
 	@echo "... src/controls.s"

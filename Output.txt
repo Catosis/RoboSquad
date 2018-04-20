@@ -1,0 +1,1 @@
+Centroid of robot 1: x position is 551, y position is 200Net position of robot 1: x position is 40, y position is -6

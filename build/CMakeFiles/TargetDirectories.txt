@@ -37,6 +37,7 @@
 /home/connie/robo_squad/build/squad/CMakeFiles/squad_generate_messages_lisp.dir
 /home/connie/robo_squad/build/squad/CMakeFiles/squad_geneus.dir
 /home/connie/robo_squad/build/squad/CMakeFiles/squad_generate_messages_cpp.dir
+/home/connie/robo_squad/build/squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir
 /home/connie/robo_squad/build/squad/CMakeFiles/std_msgs_generate_messages_py.dir
 /home/connie/robo_squad/build/squad/CMakeFiles/roscpp_generate_messages_py.dir
 /home/connie/robo_squad/build/squad/CMakeFiles/squad_generate_messages_eus.dir
@@ -57,7 +58,15 @@
 /home/connie/robo_squad/build/squad/CMakeFiles/std_msgs_generate_messages_eus.dir
 /home/connie/robo_squad/build/squad/CMakeFiles/geometry_msgs_generate_messages_lisp.dir
 /home/connie/robo_squad/build/squad/CMakeFiles/std_msgs_generate_messages_lisp.dir
-/home/connie/robo_squad/build/squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi.dir
 /home/connie/robo_squad/build/squad/CMakeFiles/geometry_msgs_generate_messages_py.dir
 /home/connie/robo_squad/build/squad/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir
 /home/connie/robo_squad/build/squad/CMakeFiles/squad_generate_messages.dir
+/home/connie/robo_squad/build/squad/CMakeFiles/_squad_generate_messages_check_deps_robot_position_msg.dir
+/home/connie/robo_squad/build/stage/CMakeFiles/list_install_components.dir
+/home/connie/robo_squad/build/stage/CMakeFiles/install.dir
+/home/connie/robo_squad/build/stage/CMakeFiles/rebuild_cache.dir
+/home/connie/robo_squad/build/stage/CMakeFiles/edit_cache.dir
+/home/connie/robo_squad/build/stage/CMakeFiles/rand_world.dir
+/home/connie/robo_squad/build/stage/CMakeFiles/install/strip.dir
+/home/connie/robo_squad/build/stage/CMakeFiles/install/local.dir
+/home/connie/robo_squad/build/stage/CMakeFiles/test.dir

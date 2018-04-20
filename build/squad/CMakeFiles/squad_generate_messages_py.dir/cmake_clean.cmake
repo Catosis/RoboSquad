@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/squad_generate_messages_py"
+  "/home/connie/robo_squad/devel/lib/python2.7/dist-packages/squad/msg/_robot_position_msg.py"
   "/home/connie/robo_squad/devel/lib/python2.7/dist-packages/squad/msg/_Kiwi.py"
   "/home/connie/robo_squad/devel/lib/python2.7/dist-packages/squad/msg/__init__.py"
 )

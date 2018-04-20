@@ -3,6 +3,7 @@
 cfbd440115b5ca7328c328d4dc2021b8 /home/connie/robo_squad/devel/include/app_loader/AppUnload.h
 f61919aecb4c69e8c6a71bacae0161d0 /home/connie/robo_squad/devel/include/app_loader/RTDestroy.h
 b26d196475efcb3973c10198d1ff64b1 /home/connie/robo_squad/devel/include/squad/Kiwi.h
+ec4353f18751b95a5f8445dd22633a2d /home/connie/robo_squad/devel/include/squad/robot_position_msg.h
 6d8fb5d761550317be459d10f4089686 /home/connie/robo_squad/devel/lib/python2.7/dist-packages/app_loader/srv/_AppLoad.py
 d03dad960e5a30c8a31e13524532ad14 /home/connie/robo_squad/devel/lib/python2.7/dist-packages/app_loader/srv/_AppUnload.py
 f7f4a1990af4bbeead1169e2b55a97d8 /home/connie/robo_squad/devel/lib/python2.7/dist-packages/app_loader/srv/_RTDestroy.py
@@ -28,10 +29,12 @@ b6a1d9654c77b2dfeace750b4ef35afd /home/connie/robo_squad/devel/lib/python2.7/dis
 b6844748dd80dda2a34dc533531daf36 /home/connie/robo_squad/devel/lib/python2.7/dist-packages/gsdf_msgs/msg/__init__.py
 c481ccf220406c8400c7ae920d031126 /home/connie/robo_squad/devel/lib/python2.7/dist-packages/squad/msg/_Kiwi.py
 e3113d9bf92ede98bf70632e16cee991 /home/connie/robo_squad/devel/lib/python2.7/dist-packages/squad/msg/__init__.py
+58ebfc501aabe6a09c95c0da0efbf4bf /home/connie/robo_squad/devel/lib/python2.7/dist-packages/squad/msg/_robot_position_msg.py
 629d6684a634afab447d12df6db71a42 /home/connie/robo_squad/devel/share/common-lisp/ros/app_loader/srv/AppLoad.lisp
 b8c7e3597f043ef657d5b11f956d5a48 /home/connie/robo_squad/devel/share/common-lisp/ros/app_loader/srv/AppUnload.lisp
 e7c1d4818a22e8b2e6427d72ab98813f /home/connie/robo_squad/devel/share/common-lisp/ros/app_loader/srv/RTDestroy.lisp
 f0d4460ce72c875c6f03fb7c7500c680 /home/connie/robo_squad/devel/share/common-lisp/ros/squad/msg/Kiwi.lisp
+c7fafbb910c2f6d17f89929d5a272ac7 /home/connie/robo_squad/devel/share/common-lisp/ros/squad/msg/robot_position_msg.lisp
 df844d1a682c7bf2442be00e23119842 /home/connie/robo_squad/devel/share/gennodejs/ros/app_loader/srv/AppLoad.js
 ee0be3ccb5033c59f57a3eecf519609d /home/connie/robo_squad/devel/share/gennodejs/ros/app_loader/srv/AppUnload.js
 f23006d407fae45190f470775035c18d /home/connie/robo_squad/devel/share/gennodejs/ros/app_loader/srv/RTDestroy.js
@@ -54,6 +57,7 @@ d46537a8201d43baf13925bb73680bcf /home/connie/robo_squad/devel/share/gennodejs/r
 197ecf04ad318e4411c6bdc49011d44e /home/connie/robo_squad/devel/share/gennodejs/ros/gsdf_msgs/msg/VirtualStigmergyPuts.js
 162641af5925139853fda47b69bd8c98 /home/connie/robo_squad/devel/share/gennodejs/ros/gsdf_msgs/msg/VirtualStigmergyQuery.js
 29f29286edd66b1660cdef2f9baac1e7 /home/connie/robo_squad/devel/share/gennodejs/ros/squad/msg/Kiwi.js
+6803cc2f55aee3ce296ee45cc56e7d50 /home/connie/robo_squad/devel/share/gennodejs/ros/squad/msg/robot_position_msg.js
 a197c0cff2d3c3ca8228fc55321a7937 /home/connie/robo_squad/devel/share/roseus/ros/app_loader/manifest.l
 0b26c0d3cde9d2f9fdf1530cf6488e41 /home/connie/robo_squad/devel/share/roseus/ros/app_loader/srv/AppLoad.l
 833a0459305fa544ea6905fecde5075c /home/connie/robo_squad/devel/share/roseus/ros/app_loader/srv/AppUnload.l
@@ -79,8 +83,10 @@ aa87793f8a3b4d55b917e2e2a49df87b /home/connie/robo_squad/devel/share/roseus/ros/
 3c3011eed69ab7bed6aa4674e31efc0c /home/connie/robo_squad/devel/share/roseus/ros/gsdf_msgs/msg/VirtualStigmergyQuery.l
 21f449105fee73eefa99e3d99acbfbe8 /home/connie/robo_squad/devel/share/roseus/ros/squad/manifest.l
 45e82aba79b5735c34461a3439728f85 /home/connie/robo_squad/devel/share/roseus/ros/squad/msg/Kiwi.l
+19e2208f856ec0d35bb4b64320b8987d /home/connie/robo_squad/devel/share/roseus/ros/squad/msg/robot_position_msg.l
 873bcd3a393af83fba84abf6dbbb126b CMakeFiles/clean_test_results
 6938b569880ff40ab995b5a464b3b980 squad/CMakeFiles/_squad_generate_messages_check_deps_Kiwi
+ce8200115a298c897db6d35b0480a85d squad/CMakeFiles/_squad_generate_messages_check_deps_robot_position_msg
 027211e82ef1e5734ff295356a41093e squad/CMakeFiles/squad_generate_messages_cpp
 027211e82ef1e5734ff295356a41093e squad/CMakeFiles/squad_generate_messages_eus
 027211e82ef1e5734ff295356a41093e squad/CMakeFiles/squad_generate_messages_lisp
