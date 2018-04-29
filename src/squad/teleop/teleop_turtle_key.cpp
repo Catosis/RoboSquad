@@ -39,7 +39,7 @@ TeleopTurtle::TeleopTurtle():
   nh_.param("scale_linear", l_scale_, l_scale_);
 
   twist_pub_ = nh_.advertise<geometry_msgs::Twist>("turtle1/cmd_vel", 1);
-  robot1_pub = nh_.advertise<squad::Kiwi>("robot1/kiwi", 1);
+  robot1_pub = nh_.advertise<squad::Kiwi>("robot3_kiwi", 1);
 
 }
 

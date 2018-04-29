@@ -204,6 +204,7 @@ while True:
                 msg.y = cy
                 msg.angle = angle1
                 pub0.publish(msg)
+                print "published message 0"
             
             elif contourTotal == 3 and isRobot == True:
                 #Prints Robot 2 at centroid position of the body
@@ -314,7 +315,7 @@ while True:
             contourTotal = 1
             isRobot = False
                 
-        #time.sleep(1)      
+        #time.sleep(0.5)      
         count += 1
         
 
