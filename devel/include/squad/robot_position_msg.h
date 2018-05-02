@@ -26,11 +26,15 @@ struct robot_position_msg_
   robot_position_msg_()
     : x(0)
     , y(0)
+    , frontx(0)
+    , fronty(0)
     , angle(0.0)  {
     }
   robot_position_msg_(const ContainerAllocator& _alloc)
     : x(0)
     , y(0)
+    , frontx(0)
+    , fronty(0)
     , angle(0.0)  {
   (void)_alloc;
     }
@@ -42,6 +46,12 @@ struct robot_position_msg_
 
    typedef int32_t _y_type;
   _y_type y;
+
+   typedef int32_t _frontx_type;
+  _frontx_type frontx;
+
+   typedef int32_t _fronty_type;
+  _fronty_type fronty;
 
    typedef float _angle_type;
   _angle_type angle;
@@ -123,12 +133,12 @@ struct MD5Sum< ::squad::robot_position_msg_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "269c87d34c95513f467e300b14f117c0";
+    return "28ee68e7cd1a8a51c576061a459afeaa";
   }
 
   static const char* value(const ::squad::robot_position_msg_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x269c87d34c95513fULL;
-  static const uint64_t static_value2 = 0x467e300b14f117c0ULL;
+  static const uint64_t static_value1 = 0x28ee68e7cd1a8a51ULL;
+  static const uint64_t static_value2 = 0xc576061a459afeaaULL;
 };
 
 template<class ContainerAllocator>
@@ -149,6 +159,8 @@ struct Definition< ::squad::robot_position_msg_<ContainerAllocator> >
   {
     return "int32 x\n\
 int32 y\n\
+int32 frontx\n\
+int32 fronty\n\
 float32 angle\n\
 ";
   }
@@ -170,6 +182,8 @@ namespace serialization
     {
       stream.next(m.x);
       stream.next(m.y);
+      stream.next(m.frontx);
+      stream.next(m.fronty);
       stream.next(m.angle);
     }
 
@@ -193,6 +207,10 @@ struct Printer< ::squad::robot_position_msg_<ContainerAllocator> >
     Printer<int32_t>::stream(s, indent + "  ", v.x);
     s << indent << "y: ";
     Printer<int32_t>::stream(s, indent + "  ", v.y);
+    s << indent << "frontx: ";
+    Printer<int32_t>::stream(s, indent + "  ", v.frontx);
+    s << indent << "fronty: ";
+    Printer<int32_t>::stream(s, indent + "  ", v.fronty);
     s << indent << "angle: ";
     Printer<float>::stream(s, indent + "  ", v.angle);
   }

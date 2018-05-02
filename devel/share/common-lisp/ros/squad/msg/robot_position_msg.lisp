@@ -17,6 +17,16 @@
     :initarg :y
     :type cl:integer
     :initform 0)
+   (frontx
+    :reader frontx
+    :initarg :frontx
+    :type cl:integer
+    :initform 0)
+   (fronty
+    :reader fronty
+    :initarg :fronty
+    :type cl:integer
+    :initform 0)
    (angle
     :reader angle
     :initarg :angle
@@ -42,6 +52,16 @@
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader squad-msg:y-val is deprecated.  Use squad-msg:y instead.")
   (y m))
 
+(cl:ensure-generic-function 'frontx-val :lambda-list '(m))
+(cl:defmethod frontx-val ((m <robot_position_msg>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader squad-msg:frontx-val is deprecated.  Use squad-msg:frontx instead.")
+  (frontx m))
+
+(cl:ensure-generic-function 'fronty-val :lambda-list '(m))
+(cl:defmethod fronty-val ((m <robot_position_msg>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader squad-msg:fronty-val is deprecated.  Use squad-msg:fronty instead.")
+  (fronty m))
+
 (cl:ensure-generic-function 'angle-val :lambda-list '(m))
 (cl:defmethod angle-val ((m <robot_position_msg>))
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader squad-msg:angle-val is deprecated.  Use squad-msg:angle instead.")
@@ -55,6 +75,18 @@
     (cl:write-byte (cl:ldb (cl:byte 8 24) unsigned) ostream)
     )
   (cl:let* ((signed (cl:slot-value msg 'y)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 4294967296) signed)))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) unsigned) ostream)
+    )
+  (cl:let* ((signed (cl:slot-value msg 'frontx)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 4294967296) signed)))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) unsigned) ostream)
+    )
+  (cl:let* ((signed (cl:slot-value msg 'fronty)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 4294967296) signed)))
     (cl:write-byte (cl:ldb (cl:byte 8 0) unsigned) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 8) unsigned) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 16) unsigned) ostream)
@@ -80,6 +112,18 @@
       (cl:setf (cl:ldb (cl:byte 8 16) unsigned) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 24) unsigned) (cl:read-byte istream))
       (cl:setf (cl:slot-value msg 'y) (cl:if (cl:< unsigned 2147483648) unsigned (cl:- unsigned 4294967296))))
+    (cl:let ((unsigned 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:slot-value msg 'frontx) (cl:if (cl:< unsigned 2147483648) unsigned (cl:- unsigned 4294967296))))
+    (cl:let ((unsigned 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:slot-value msg 'fronty) (cl:if (cl:< unsigned 2147483648) unsigned (cl:- unsigned 4294967296))))
     (cl:let ((bits 0))
       (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
@@ -96,18 +140,20 @@
   "squad/robot_position_msg")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<robot_position_msg>)))
   "Returns md5sum for a message object of type '<robot_position_msg>"
-  "269c87d34c95513f467e300b14f117c0")
+  "28ee68e7cd1a8a51c576061a459afeaa")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'robot_position_msg)))
   "Returns md5sum for a message object of type 'robot_position_msg"
-  "269c87d34c95513f467e300b14f117c0")
+  "28ee68e7cd1a8a51c576061a459afeaa")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<robot_position_msg>)))
   "Returns full string definition for message of type '<robot_position_msg>"
-  (cl:format cl:nil "int32 x~%int32 y~%float32 angle~%~%~%"))
+  (cl:format cl:nil "int32 x~%int32 y~%int32 frontx~%int32 fronty~%float32 angle~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'robot_position_msg)))
   "Returns full string definition for message of type 'robot_position_msg"
-  (cl:format cl:nil "int32 x~%int32 y~%float32 angle~%~%~%"))
+  (cl:format cl:nil "int32 x~%int32 y~%int32 frontx~%int32 fronty~%float32 angle~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <robot_position_msg>))
   (cl:+ 0
+     4
+     4
      4
      4
      4
@@ -117,5 +163,7 @@
   (cl:list 'robot_position_msg
     (cl:cons ':x (x msg))
     (cl:cons ':y (y msg))
+    (cl:cons ':frontx (frontx msg))
+    (cl:cons ':fronty (fronty msg))
     (cl:cons ':angle (angle msg))
 ))

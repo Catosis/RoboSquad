@@ -20,6 +20,8 @@ class robot_position_msg {
       // initObj === null is a special case for deserialization where we don't initialize fields
       this.x = null;
       this.y = null;
+      this.frontx = null;
+      this.fronty = null;
       this.angle = null;
     }
     else {
@@ -34,6 +36,18 @@ class robot_position_msg {
       }
       else {
         this.y = 0;
+      }
+      if (initObj.hasOwnProperty('frontx')) {
+        this.frontx = initObj.frontx
+      }
+      else {
+        this.frontx = 0;
+      }
+      if (initObj.hasOwnProperty('fronty')) {
+        this.fronty = initObj.fronty
+      }
+      else {
+        this.fronty = 0;
       }
       if (initObj.hasOwnProperty('angle')) {
         this.angle = initObj.angle
@@ -50,6 +64,10 @@ class robot_position_msg {
     bufferOffset = _serializer.int32(obj.x, buffer, bufferOffset);
     // Serialize message field [y]
     bufferOffset = _serializer.int32(obj.y, buffer, bufferOffset);
+    // Serialize message field [frontx]
+    bufferOffset = _serializer.int32(obj.frontx, buffer, bufferOffset);
+    // Serialize message field [fronty]
+    bufferOffset = _serializer.int32(obj.fronty, buffer, bufferOffset);
     // Serialize message field [angle]
     bufferOffset = _serializer.float32(obj.angle, buffer, bufferOffset);
     return bufferOffset;
@@ -63,13 +81,17 @@ class robot_position_msg {
     data.x = _deserializer.int32(buffer, bufferOffset);
     // Deserialize message field [y]
     data.y = _deserializer.int32(buffer, bufferOffset);
+    // Deserialize message field [frontx]
+    data.frontx = _deserializer.int32(buffer, bufferOffset);
+    // Deserialize message field [fronty]
+    data.fronty = _deserializer.int32(buffer, bufferOffset);
     // Deserialize message field [angle]
     data.angle = _deserializer.float32(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 12;
+    return 20;
   }
 
   static datatype() {
@@ -79,7 +101,7 @@ class robot_position_msg {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '269c87d34c95513f467e300b14f117c0';
+    return '28ee68e7cd1a8a51c576061a459afeaa';
   }
 
   static messageDefinition() {
@@ -87,6 +109,8 @@ class robot_position_msg {
     return `
     int32 x
     int32 y
+    int32 frontx
+    int32 fronty
     float32 angle
     
     `;
@@ -110,6 +134,20 @@ class robot_position_msg {
     }
     else {
       resolved.y = 0
+    }
+
+    if (msg.frontx !== undefined) {
+      resolved.frontx = msg.frontx;
+    }
+    else {
+      resolved.frontx = 0
+    }
+
+    if (msg.fronty !== undefined) {
+      resolved.fronty = msg.fronty;
+    }
+    else {
+      resolved.fronty = 0
     }
 
     if (msg.angle !== undefined) {

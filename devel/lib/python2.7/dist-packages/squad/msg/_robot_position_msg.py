@@ -7,15 +7,17 @@ import struct
 
 
 class robot_position_msg(genpy.Message):
-  _md5sum = "269c87d34c95513f467e300b14f117c0"
+  _md5sum = "28ee68e7cd1a8a51c576061a459afeaa"
   _type = "squad/robot_position_msg"
   _has_header = False #flag to mark the presence of a Header object
   _full_text = """int32 x
 int32 y
+int32 frontx
+int32 fronty
 float32 angle
 """
-  __slots__ = ['x','y','angle']
-  _slot_types = ['int32','int32','float32']
+  __slots__ = ['x','y','frontx','fronty','angle']
+  _slot_types = ['int32','int32','int32','int32','float32']
 
   def __init__(self, *args, **kwds):
     """
@@ -25,7 +27,7 @@ float32 angle
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       x,y,angle
+       x,y,frontx,fronty,angle
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -38,11 +40,17 @@ float32 angle
         self.x = 0
       if self.y is None:
         self.y = 0
+      if self.frontx is None:
+        self.frontx = 0
+      if self.fronty is None:
+        self.fronty = 0
       if self.angle is None:
         self.angle = 0.
     else:
       self.x = 0
       self.y = 0
+      self.frontx = 0
+      self.fronty = 0
       self.angle = 0.
 
   def _get_types(self):
@@ -58,7 +66,7 @@ float32 angle
     """
     try:
       _x = self
-      buff.write(_get_struct_2if().pack(_x.x, _x.y, _x.angle))
+      buff.write(_get_struct_4if().pack(_x.x, _x.y, _x.frontx, _x.fronty, _x.angle))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -71,8 +79,8 @@ float32 angle
       end = 0
       _x = self
       start = end
-      end += 12
-      (_x.x, _x.y, _x.angle,) = _get_struct_2if().unpack(str[start:end])
+      end += 20
+      (_x.x, _x.y, _x.frontx, _x.fronty, _x.angle,) = _get_struct_4if().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -86,7 +94,7 @@ float32 angle
     """
     try:
       _x = self
-      buff.write(_get_struct_2if().pack(_x.x, _x.y, _x.angle))
+      buff.write(_get_struct_4if().pack(_x.x, _x.y, _x.frontx, _x.fronty, _x.angle))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -100,8 +108,8 @@ float32 angle
       end = 0
       _x = self
       start = end
-      end += 12
-      (_x.x, _x.y, _x.angle,) = _get_struct_2if().unpack(str[start:end])
+      end += 20
+      (_x.x, _x.y, _x.frontx, _x.fronty, _x.angle,) = _get_struct_4if().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -110,9 +118,9 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_2if = None
-def _get_struct_2if():
-    global _struct_2if
-    if _struct_2if is None:
-        _struct_2if = struct.Struct("<2if")
-    return _struct_2if
+_struct_4if = None
+def _get_struct_4if():
+    global _struct_4if
+    if _struct_4if is None:
+        _struct_4if = struct.Struct("<4if")
+    return _struct_4if

@@ -114,7 +114,7 @@ def step(goalx, goaly):
 		kiwi.w1 = vx * 100; #number is the duty cycle %. 100% when vx > 
 		kiwi.w2 = -0.5 * vx - math.sqrt(1.5) * vy * 100;
 		kiwi.w3 = -0.5 * vx + math.sqrt(1.5) * vy * 100;
-		#print "kiwi---" + str(kiwi.w1) + ", " + str(kiwi.w2) + ", " + str(kiwi.w3)
+		print "kiwi---" + str(kiwi.w1) + ", " + str(kiwi.w2) + ", " + str(kiwi.w3)
 		publishers[index].publish(kiwi)
 
 		if(distFromGoal < 100):
